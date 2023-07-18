@@ -1,0 +1,31 @@
+function findUniqueCharacters(str){
+      let uniq_result = "";
+      let words = str.split(' ');
+      for(let i = 0; i < words.length; i++){
+        let uniq = "";
+        for(let k = 0; k < words[i].length; k++){
+          if(uniq.includes(words[i][k]) === false){      
+            uniq += words[i][k]
+          } 
+        }
+        uniq_result += " "+uniq[0];
+      }
+      
+      return uniq_result
+    }
+    function findUniqueCharactersInArr(str){
+      let uniq = "";
+      let characters = str.split(' ');
+      for(let i = 0; i < characters.length; i++){
+       if(uniq.includes(characters[i]) === false){      
+            uniq += characters[i]
+        }else{
+          uniq.replace("characters[i]",'sssss')
+        } 
+      }
+      return uniq[0]
+    }
+let str = "C makes it easy for you to shoot yourself в foot. C++ мабуть, що harder, але коли ви робите, це тьмяно, як ваша нога. (с) Bjarne Stroustrup"
+   let uniqstr =  findUniqueCharacters(str);
+   console.log(uniqstr);
+   console.log(findUniqueCharactersInArr(uniqstr))
